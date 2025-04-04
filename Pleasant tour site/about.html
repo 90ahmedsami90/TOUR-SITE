@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                }
+                
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: white;
+        }
+        .logo {
+            font-family: 'Old English Text MT', serif;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .logo span {
+            color: #008cba;
+        }
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+        .nav a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #002147;
+        }
+        /* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropbtn i {
+    font-size: 12px;
+    transition: transform 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #001f4d;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-weight: 900;
+    font-family: 'Verdana', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #0088a9;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn i {
+    transform: rotate(180deg);
+}
+        .contact-btn {
+            background: #008cba;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .heading-container {
+            text-align: left;
+             margin: 40px 60px; 
+        }
+        .main-heading {
+            font-size: 36px;
+            font-weight: bold;
+            color: #001f4d;
+        }
+        .main-heading span {
+            color: #0088a9;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: normal;
+            color: #002147;
+            font-weight: bold;
+        }
+        h1 span {
+            color: #0088a9;
+            font-weight: bold;
+        }
+        strong {
+            font-weight: bold;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        .contact {
+            font-weight: bold;
+            color: #a52a2a;
+        }
+        .destinations, .tour-packages {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .destination-card, .package-card {
+            position: relative;
+            width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .destination-card img, .package-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .destination-card .label {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #001f4d;
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        .destination-card .title {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .package-title {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .heading-container {
+            text-align: left;
+            margin: 40px 60px;
+        }
+        .subheading {
+            font-size: 14px;
+            color: #6c757d;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .main-heading {
+            font-size: 36px;
+            font-weight: bold;
+            color: #001f4d;
+        }
+        .main-heading span {
+            color: #0088a9;
+        }
+        .footer {
+            text-align: center;
+            background-color: #002147;
+            color: white;
+            height: 10vh;
+        }
+        .foot-p {
+            padding-top: 2%;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Pleasant <span>Tours</span></div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="international.html" class="dropbtn">Tour Packages <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="international.html">International</a>
+                    <a href="beach.html">Beach</a>
+                    <a href="forest.html">Forest</a>
+                    <a href="mountain.html">Mountain</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+        </nav>
+        <button class="contact-btn" onclick="redirectToWhatsApp()">Contact Us Now</button>
+    </header>
+    <div class="heading-container">
+        <marquee behavior="" direction=""><h2 class="main-heading">About <span>Us</span></h2></marquee>
+    </div>
+    <h1>Welcome to <span>Pleasant-Tours.com</span></h1>
+    <p><strong>Pleasant Tour Agency – Your Gateway to Unforgettable Journeys</strong></p>
+    <p>Welcome to Pleasant Tour Agency, your trusted travel partner based in Hyderabad, Pakistan. We specialize in curating exceptional travel experiences, offering a diverse range of trips that cater to every kind of traveler. Whether you dream of exploring majestic mountains, relaxing on pristine beaches, wandering through dense forests, or discovering new international destinations, Pleasant Tour Agency is here to turn your travel dreams into reality.</p>
+    <h2><strong>Who We Are</strong></h2>
+    <p>At Pleasant Tour Agency, we are passionate about travel and dedicated to providing our clients with seamless and memorable journeys. Our experienced team of travel experts carefully designs each itinerary, ensuring that every trip is filled with excitement, comfort, and cultural enrichment. We pride ourselves on our attention to detail, personalized services, and competitive pricing, making world-class travel accessible to everyone.</p>
+    <h2><strong>Our Services</strong></h2>
+    <p><strong>International Tours</strong><br>We offer international travel packages to iconic destinations worldwide. Whether you seek the rich history of Europe, the vibrant cultures of Asia, an African adventure, or the luxurious escapes of the Middle East, we have the perfect travel plan for you.</p>
+    <p><strong>Mountain Trips</strong><br>From the snow-capped peaks of the Himalayas to the rugged Karakoram Range, we offer guided trekking, skiing, snowboarding, and photography tours for nature lovers.</p>
+    <p><strong>Beach Vacations</strong><br>Escape to paradise with our carefully curated beach vacations, including luxury resorts, water sports, island hopping, and relaxation retreats.</p>
+    <p><strong>Forest and Nature Trips</strong><br>Immerse yourself in nature with jungle safaris, eco-tourism adventures, bird-watching excursions, and serene retreats.</p>
+    <h2><strong>Why Choose Pleasant Tour Agency?</strong></h2>
+    <p>✔ Expertly curated itineraries for unique experiences.<br>
+       ✔ Affordable packages without compromising quality.<br>
+       ✔ Personalized services tailored to your preferences.<br>
+       ✔ 24/7 customer support.<br>
+       ✔ Reliable and trustworthy travel services.</p>
+    <h2><strong>Book Your Dream Trip Today!</strong></h2>
+    <p>Let Pleasant Tour Agency be your guide to the world’s most incredible destinations. Contact us today to start planning your next unforgettable journey!</p>
+ <marquee behavior="" direction="left" >  <h2 class="main-heading" style="font-size: 44px;">WE <span>OFFER</span></h2></marquee>
+    <div class="heading-container">
+        <p class="subheading">CHOOSE YOUR PLACE</p>
+        <h2 class="main-heading">INTERNATIONAL <span>PACKAGES</span></h2>
+    </div>
+    <div class="destinations">
+        <div class="destination-card">
+            <a href="international.html">
+                <img src="img/paris.jpeg" alt="Paris">
+                <div class="label">PARIS</div>
+                <div class="title">Paris<br><span style="font-size: 14px;">Top Destinations</span></div>
+            </a>
+        </div>
+        <div class="destination-card">
+            <a href="international.html">
+                <img src="img/dubai.jpeg" alt="Dubai">
+                <div class="label">DUBAI</div>
+                <div class="title">Dubai<br><span style="font-size: 14px;">Top Destinations</span></div>
+            </a>
+        </div>
+        <div class="destination-card">
+            <a href="international.html">
+                <img src="img/london.webp" alt="London">
+                <div class="label">LONDON</div>
+                <div class="title">London<br><span style="font-size: 14px;">Top Destinations</span></div>
+            </a>
+        </div>
+    </div>
+    <div class="heading-container">
+        <p class="subheading">HOLIDAY PACKAGES</p>
+        <h2 class="main-heading">POPULAR <span>TOUR AREAS</span></h2>
+    </div>
+    <div class="tour-packages">
+        <div class="package-card">
+            <a href="forest.html">
+                <img src="img/forest.jpeg" alt="Forest Tours">
+                <div class="package-title">📍 Forest Tours</div>
+            </a>
+        </div>
+        <div class="package-card">
+            <a href="mountain.html">
+                <img src="img/mountain.jpeg" alt="Mountain Tours">
+                <div class="package-title">📍 Mountain Tours</div>
+            </a>
+        </div>
+        <div class="package-card">
+            <a href="beach.html">
+                <img src="img/beaches.webp" alt="Beaches Tours">
+                <div class="package-title">📍 Beaches Tours</div>
+            </a>
+        </div>
+    </div>
+    <div class="footer"><p class="foot-p">©2025 Pleasant Tour and Travels. All rights reserved.</p></div>
+<script>
+          function redirectToWhatsApp() {
+            const phoneNumber = "+923313145820"; // Replace with your WhatsApp number
+            const message = "Hello, I would like to inquire about your tour packages."; // Predefined message
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.location.href = url; // Redirect to WhatsApp
+        }
+</script>
+</body>
+</html>
